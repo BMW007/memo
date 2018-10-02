@@ -1,0 +1,9 @@
+########################################################
+sed & awk memo:
+
+  sed -e 's/678/hhh/' 111.txt  >> out.txt   
+  sed -i 's/printf/INFO/' plat/sprd/sharkle/drivers/pwrc/pwrc.c
+  sed -i 's/printf/INFO/g' plat/sprd/sharkle/drivers/pwrc/pwrc.c
+
+//去掉file中的前 (n个.) n个字符
+  sed  -i  's/^...//' <file>
