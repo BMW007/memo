@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/mingbo.wang/.vim'
+let g:netrw_dirhist_2='/home/mingbo.wang/bmwtest/le-dbg-log'
+let g:netrw_dirhist_3='/home/mingbo.wang/.vim'
+let g:netrw_dirhist_4='/home/mingbo.wang/gitTmp/powervr_tools_2.5.1/HW_Integration/WDT_Test'
+let g:netrw_dirhist_5='/home/mingbo.wang/gitTmp/powervr_tools_2.5.1/HW_Integration_new/QA/test_activation_relu'
+let g:netrw_dirhist_6='/home/mingbo.wang/gitTmp/powervr_tools_2.5.1/HW_Integration_new/QA/test_elementwise_NEG'
+let g:netrw_dirhist_7='/home/mingbo.wang/gitTmp/powervr_tools_2.5.1/HW_Integration_new/QA/test_fully_connected'
+let g:netrw_dirhist_8='/home/mingbo.wang/gitTmp/powervr_tools_2.5.1/HW_Integration_new/QA/test_flatten'
