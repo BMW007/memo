@@ -24,3 +24,10 @@ https://www.zhihu.com/question/60493121
 sigmoid激活函数：除了输出层是一个二分类问题基本不会用它。
 tanh激活函数：tanh是非常优秀的，几乎适合所有场合。
 ReLu激活函数：最常用的默认函数，，如果不确定用哪个激活函数，就使用ReLu或者Leaky ReLu。
+
+5、参数VS超参数（Parameters vs Hyperparameters）
+比如算法中的learning rate a（学习率）、iterations(梯度下降法循环的数量)、L（隐藏层数目）、n^([l])（隐藏层单元数目）、
+choice of activation function（激活函数的选择）都需要你来设置，这些数字实际上控制了最后的参数W和b的值，所以它们被称作超参数。
+
+6.https://www.zhihu.com/question/268384579 
+神经网络为什么可以（理论上）近似拟合任何函数？
