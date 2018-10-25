@@ -1,0 +1,67 @@
+--------------------- 
+kill -9
+
+kill  -s  9  15572
+
+其中，-s 9 制定了传递给进程的信号是９，即强制、尽快终止进程。 15572则是上面ps查到的火狐（firefox）的PID。
+
+简单吧，但有个问题，进程少时ps还无所谓，进程多了，就会觉得痛苦了，无论是ps -ef 还是ps -aux，每次都要在一大串进程信息里面查找到要杀的进程PID，看的眼都花了。
+
+用法详解：
+
+kill -9， 这个强大和危险的命令迫使进程在运行时突然终止，进程在结束后不能自我清理。危害是导致系统资源无法正常释放，一般不推荐使用，除非其他办法都无效。 
+当使用此命令时，一定要通过ps -ef确认没有剩下任何僵尸进程。只能通过终止父进程来消除僵尸进程。如果僵尸进程被init收养，问题就比较严重了。杀死init进程意味着关闭系统。 
+如果系统中有僵尸进程，并且其父进程是init，而且僵尸进程占用了大量的系统资源，那么就需要在某个时候重启机器以清除进程表了。
+--------------------- 
+ kill 
+
+杀死进程最安全的方法是单纯使用kill命令，不加修饰符，不带标志。
+例如： # kill -pid  
+注释： 标准的kill命令，默认采用信号（signal）号是15，通常都能达到目的，终止有问题的进程，并把进程的资源释放给系统。然而，如果进程启动了子进程，只杀死父进程，子进程仍在运行，因此仍消耗资源。为了防止这些所谓的“僵尸进程”，应确保在杀死父进程之前，先杀死其所有的子进程。
+--------------------- 
+作者：阳光岛主 
+来源：CSDN 
+原文：https://blog.csdn.net/ithomer/article/details/9402431 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+ps -ef | grep Alan | grep -v grep | awk '{print $1,$2,$3 }'
+
+各种信号及其用途
+SIGKILL	Kill (terminate immediately)	9
+SIGTERM	Termination (request to terminate)	15
+
+
+Signal	Description	Signal number on Linux x86
+SIGABRT	Process aborted	6
+SIGALRM	Signal raised by alarm	14
+SIGBUS	Bus error: "access to undefined portion of memory object"	7
+SIGCHLD	Child process terminated, stopped (or continued*)	17
+SIGCONT	Continue if stopped	18
+SIGFPE	Floating point exception: "erroneous arithmetic operation"	8
+SIGHUP	Hangup	1
+SIGILL	Illegal instruction	4
+SIGINT	Interrupt	2
+
+SIGPIPE	Write to pipe with no one reading	13
+SIGQUIT	Quit and dump core	3
+SIGSEGV	Segmentation violation	11
+SIGSTOP	Stop executing temporarily	19
+
+SIGTSTP	Terminal stop signal	20
+SIGTTIN	Background process attempting to read from tty ("in")	21
+SIGTTOU	Background process attempting to write to tty ("out")	22
+SIGUSR1	User-defined 1	10
+SIGUSR2	User-defined 2	12
+SIGPOLL	Pollable event	29
+SIGPROF	Profiling timer expired	27
+SIGSYS	Bad syscall	31
+SIGTRAP	Trace/breakpoint trap	5
+SIGURG	Urgent data available on socket	23
+SIGVTALRM	Signal raised by timer counting virtual time: "virtual timer expired"	26
+SIGXCPU	CPU time limit exceeded	24
+SIGXFSZ	File size limit exceeded	25
+--------------------- 
+作者：阳光岛主 
+来源：CSDN 
+原文：https://blog.csdn.net/ithomer/article/details/9402431 
+版权声明：本文为博主原创文章，转载请附上博文链接！
