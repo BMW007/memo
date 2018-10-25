@@ -31,3 +31,10 @@ choice of activation function（激活函数的选择）都需要你来设置，
 
 6.https://www.zhihu.com/question/268384579 
 神经网络为什么可以（理论上）近似拟合任何函数？
+
+7.CNN入门讲解：卷积层是如何提取特征的？
+https://blog.csdn.net/bobo_jiang/article/details/79080561?utm_source=blogxgwz2
+
+8.为什么要用神经网络？ https://ai.baidu.com/forum/topic/show/498386 
+
+9.分类与回归区别是什么？ https://www.zhihu.com/question/21329754 
