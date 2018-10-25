@@ -1,0 +1,1 @@
+一种在通信系统中数据交织/解交织的处理方法: https://patents.google.com/patent/CN1185883C/zh 
