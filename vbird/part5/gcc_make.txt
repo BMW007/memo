@@ -1,0 +1,42 @@
+*************************************************************************************
+http://linux.vbird.org/linux_basic/0520source_code_and_tarball.php#simple_ex_gcc
+*************************************************************************************
+
+wget http://linux.vbird.org/linux_basic/0520source/hello.c
+wget http://linux.vbird.org/linux_basic/0520source/thanks.c
+wget http://linux.vbird.org/linux_basic/0520source/thanks_2.c
+wget http://linux.vbird.org/linux_basic/0520source/main.tgz
+
+
+----------------------------------------------------------------------------
+mingbo.wang@xmand01:~/vbird/part5/hello1$ ls
+hello.c
+mingbo.wang@xmand01:~/vbird/part5/hello1$ gcc -c hello.c 
+mingbo.wang@xmand01:~/vbird/part5/hello1$ ls
+hello.c  hello.o
+mingbo.wang@xmand01:~/vbird/part5/hello1$ gcc -o hello hello.o 
+mingbo.wang@xmand01:~/vbird/part5/hello1$ ls
+hello  hello.c  hello.o
+mingbo.wang@xmand01:~/vbird/part5/hello1$ ./hello 
+Hello World
+mingbo.wang@xmand01:~/vbird/part5/hello1$ 
+-----------------------------------------------------------------------------
+mingbo.wang@xmand01:~/vbird/part5/thanks$ gcc -c thanks.c thanks_2.c
+mingbo.wang@xmand01:~/vbird/part5/thanks$ gcc -o thanks thanks.o thanks_2.o
+mingbo.wang@xmand01:~/vbird/part5/thanks$ ls
+thanks  thanks_2.c  thanks_2.o  thanks.c  thanks.o
+mingbo.wang@xmand01:~/vbird/part5/thanks$ ./thanks 
+Hello World
+Thank you!
+------------------------------------------------------------------------------
+mingbo.wang@xmand01:~/vbird/part5/thanks$ gcc -O -c thanks.c thanks_2.c
+mingbo.wang@xmand01:~/vbird/part5/thanks$ gcc -o thanks thanks.o thanks_2.o
+mingbo.wang@xmand01:~/vbird/part5/thanks$ ./thanks 
+Hello World
+Thank you!
+mingbo.wang@xmand01:~/vbird/part5/thanks$ gcc -Wall -c thanks.c thanks_2.c
+thanks.c: In function ‘main’:
+thanks.c:5: warning: implicit declaration of function ‘thanks_2’
+thanks.c:6: warning: control reaches end of non-void function
+------------------------------------------------------------------------------
+
