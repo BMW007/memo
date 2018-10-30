@@ -40,3 +40,92 @@ thanks.c:5: warning: implicit declaration of function ‘thanks_2’
 thanks.c:6: warning: control reaches end of non-void function
 ------------------------------------------------------------------------------
 
+mingbo.wang@xmand01:~/vbird/part5/make1$ ./main 
+
+
+Please input your name: mingbo
+
+Please enter the degree angle (ex> 90): 120
+
+
+Hi, Dear mingbo, nice to meet you.
+The Sin is:  0.87
+The Cos is: -0.50
+mingbo.wang@xmand01:~/vbird/part5/make1$ ls
+cos_value.c  cos_value.o  haha.c  haha.o  main  main.c  main.o  sin_value.c  sin_value.o
+mingbo.wang@xmand01:~/vbird/part5/make1$ rm main
+mingbo.wang@xmand01:~/vbird/part5/make1$ ls
+cos_value.c  cos_value.o  haha.c  haha.o  main.c  main.o  sin_value.c  sin_value.o
+mingbo.wang@xmand01:~/vbird/part5/make1$ rm *.o
+mingbo.wang@xmand01:~/vbird/part5/make1$ make
+make: *** No targets specified and no makefile found.  Stop.
+mingbo.wang@xmand01:~/vbird/part5/make1$ vim makefile
+mingbo.wang@xmand01:~/vbird/part5/make1$ make
+cc    -c -o main.o main.c
+main.c: In function ‘main’:
+main.c:10: warning: format ‘%s’ expects type ‘char *’, but argument 2 has type ‘char (*)[15]’
+cc    -c -o haha.o haha.c
+cc    -c -o sin_value.o sin_value.c
+cc    -c -o cos_value.o cos_value.c
+gcc -o main main.o haha.o sin_value.o cos_value.o -lm
+mingbo.wang@xmand01:~/vbird/part5/make1$ ls
+cos_value.c  cos_value.o  haha.c  haha.o  main  main.c  main.o  makefile  sin_value.c  sin_value.o
+mingbo.wang@xmand01:~/vbird/part5/make1$ ls
+cos_value.c  cos_value.o  haha.c  haha.o  main  main.c  main.o  makefile  sin_value.c  sin_value.o
+mingbo.wang@xmand01:~/vbird/part5/make1$ cat makefile 
+main: main.o haha.o sin_value.o cos_value.o
+	gcc -o main main.o haha.o sin_value.o cos_value.o -lm
+mingbo.wang@xmand01:~/vbird/part5/make1$ make
+make: `main' is up to date.
+mingbo.wang@xmand01:~/vbird/part5/make1$ 
+---------------------------------------------------------------------------------------------------------
+
+mingbo.wang@xmand01:~/vbird/part5/make1$ ls
+cos_value.c  haha.c  main.c  makefile  sin_value.c
+mingbo.wang@xmand01:~/vbird/part5/make1$ cat makefile 
+LIBS = -lm
+OBJS = main.o haha.o sin_value.o cos_value.o
+main: ${OBJS}
+	gcc -o main ${OBJS} ${LIBS}
+clean:
+	rm -f main ${OBJS}
+mingbo.wang@xmand01:~/vbird/part5/make1$ make main
+cc    -c -o main.o main.c
+main.c: In function ‘main’:
+main.c:10: warning: format ‘%s’ expects type ‘char *’, but argument 2 has type ‘char (*)[15]’
+cc    -c -o haha.o haha.c
+cc    -c -o sin_value.o sin_value.c
+cc    -c -o cos_value.o cos_value.c
+gcc -o main main.o haha.o sin_value.o cos_value.o -lm
+mingbo.wang@xmand01:~/vbird/part5/make1$ make main
+make: `main' is up to date.
+mingbo.wang@xmand01:~/vbird/part5/make1$ ll
+total 56
+drwxr-xr-x 2 mingbo.wang psdgroup 4096 Oct 26 20:52 ./
+drwxr-xr-x 6 mingbo.wang psdgroup 4096 Oct 26 20:10 ../
+-rw-r--r-- 1 mingbo.wang psdgroup  184 Sep  4  2015 cos_value.c
+-rw-r--r-- 1 mingbo.wang psdgroup 1760 Oct 26 20:52 cos_value.o
+-rw-r--r-- 1 mingbo.wang psdgroup  101 Jun  9  2009 haha.c
+-rw-r--r-- 1 mingbo.wang psdgroup 1536 Oct 26 20:52 haha.o
+-rwxr-xr-x 1 mingbo.wang psdgroup 8857 Oct 26 20:52 main*
+-rw-r--r-- 1 mingbo.wang psdgroup  309 Oct 26 20:17 main.c
+-rw-r--r-- 1 mingbo.wang psdgroup 2216 Oct 26 20:52 main.o
+-rw-r--r-- 1 mingbo.wang psdgroup  126 Oct 26 20:33 makefile
+-rw-r--r-- 1 mingbo.wang psdgroup  186 Sep  4  2015 sin_value.c
+-rw-r--r-- 1 mingbo.wang psdgroup 1760 Oct 26 20:52 sin_value.o
+mingbo.wang@xmand01:~/vbird/part5/make1$ ./main 
+
+
+Please input your name: mi^H^H^H^H^H^C
+mingbo.wang@xmand01:~/vbird/part5/make1$ ./main 
+
+
+Please input your name: Alan
+
+Please enter the degree angle (ex> 90): 360
+
+
+Hi, Dear Alan, nice to meet you.
+The Sin is: -0.00
+The Cos is:  1.00
+mingbo.wang@xmand01:~/vbird/part5/make1$
