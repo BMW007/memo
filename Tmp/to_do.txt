@@ -1,1 +1,26 @@
 一种在通信系统中数据交织/解交织的处理方法: https://patents.google.com/patent/CN1185883C/zh 
+
+
+关于UFS协议可以在JEDEC下载官方英文文档
+https://www.jedec.org/
+https://www.jedec.org/document_search?search_api_views_fulltext=UFS+protocol
+https://www.jedec.org/jedec-china
+
+
+蛋蛋读UFS之一：UFS简介
+http://www.ssdfans.com/blog/2018/05/30/蛋蛋读ufs之一：ufs简介/
+http://www.ssdfans.com/blog/2018/05/30/%E8%9B%8B%E8%9B%8B%E8%AF%BBufs%E4%B9%8B%E4%B8%80%EF%BC%9Aufs%E7%AE%80%E4%BB%8B/
+
+为了让手机更快，手机厂商使用更快、更多核的CPU，加大系统内存（4GB不够用6GB，6GB不够用8GB），使用更快的存储设备。无论是电脑还是手机，三驾马车（CPU，内存和存储设备）中，跑得最慢的就是存储设备了。CPU和内存的快步向前，促使最慢的存储设备也需要努力跟上，不然再快的CPU和再大容量的内存，你的手机用起来还是让你觉得不爽。
+
+近年来，由于闪存技术的应用和发展，无论是电脑上的硬盘，还是手机中的存储设备，都在变得越来越快。
+电脑上，从HDD 到SSD，从SATA SSD到PCIe SSD，硬盘是越来越快；
+
+手机上，从SD卡，到eMMC卡，再到UFS卡，存储卡的速度也是越来越快。现在一般手机配的是eMMC，旗舰高端手机配的是UFS。
+
+UFS最新标准是UFS3.0，于2018年1月30日发布。它最大带宽可以达到2163MB/s！4倍SATA3.0的速度 （600MB/s），超过PCIe3.0x2的速度（2GB/s单向速度）。
+
+不过，目前市面上的UFS产品还是UFS2.0/2.1，其最大带宽1081MB/s，也是秒杀一般的SSD。
+UFS协议是JEDEC（www.jedec.org）组织制定的，三星、海力士、东芝等公司力捧。
+
+如果说eMMC是手机中的HDD，那么UFS就是手机中的SSD。UFS取代eMMC成为主流手机存储协议，这是毫无疑问的。不过，UFS一统天下的道路上还有一个拦路虎，那就是NVMe。有人说，NVMe不是SSD的协议标准吗？没错，不过，我要提醒大家的是，苹果现在手机中存储协议是NVMe而不是UFS。在短期，UFS和NVMe会分别在安卓和苹果手机中存在。长期来说，UFS和NVMe是二分天下，还是合二为一，我们只能拭目以待了。
