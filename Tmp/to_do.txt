@@ -24,3 +24,11 @@ UFS最新标准是UFS3.0，于2018年1月30日发布。它最大带宽可以达�
 UFS协议是JEDEC（www.jedec.org）组织制定的，三星、海力士、东芝等公司力捧。
 
 如果说eMMC是手机中的HDD，那么UFS就是手机中的SSD。UFS取代eMMC成为主流手机存储协议，这是毫无疑问的。不过，UFS一统天下的道路上还有一个拦路虎，那就是NVMe。有人说，NVMe不是SSD的协议标准吗？没错，不过，我要提醒大家的是，苹果现在手机中存储协议是NVMe而不是UFS。在短期，UFS和NVMe会分别在安卓和苹果手机中存在。长期来说，UFS和NVMe是二分天下，还是合二为一，我们只能拭目以待了。
+
+
+SCM： 颠覆存储系统软件架构
+http://stor.51cto.com/art/201710/553962.htm 
+
+华为企业互动社区：NAND Flash技术的发展路径
+https://forum.huawei.com/enterprise/zh/thread-409405-1-1.html 
+
